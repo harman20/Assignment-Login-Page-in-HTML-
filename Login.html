@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        form {
+            background-color: #00B3B7;
+            height: 300px;
+            width: 300px;
+        }
+
+        p {
+            font-weight: bold;
+            font-style: italic;
+            color: blue;
+        }
+
+        .center {
+            margin-left: 40%;
+        }
+    </style>
+    <script>
+        function validate(e) {
+
+            var x = document.getElementsByTagName("input");
+            if (x[1].value.length < 8) {
+                x[1].value = "";
+                alert("Password Must be of 8 character !");
+                return false
+            } else {
+                alert("Submitted Successfuly")
+                return true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="center">
+        <p>Account Login</p>
+        <form onsubmit="return validate()">
+            <font>User Name:-</font>
+            <input type="text" placeholder="eg. harman@20" /> </br></br>
+            <font>Password -:</font>
+            <input type="password" /> </br></br>
+            <input style="margin-left: 40%;" type="submit" value="Submit" />
+        </form>
+    </div>
+</body>
+
+</html>
